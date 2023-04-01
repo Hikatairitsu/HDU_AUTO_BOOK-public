@@ -166,7 +166,7 @@ if __name__ == "__main__":
     if stat != "ok":
         for i in range(12):
             print("尝试重新预约")
-            time.sleep(30)
+            time.sleep(10)
             stat, msg = s.book_favorite_seat(time_data[key]['开始时间'], time_data[key]['持续小时数'])
             print(stat, msg)
             if stat == "ok":
