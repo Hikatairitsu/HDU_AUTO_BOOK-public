@@ -27,7 +27,8 @@ def get_one_study_room_seat(floor):
         return random.randint(28868, 29237)
     if floor == 22:
         # 58560-58759
-        return random.randint(58560, 58759)
+        # return random.randint(58560, 58759)
+        return 58603
 
 
 class SeatAutoBooker:
@@ -186,9 +187,9 @@ if __name__ == "__main__":
         exit(-1)
     stat, msg = s.book_favorite_seat(cfg[key]['开始时间'], cfg[key]['持续小时数'])
     if stat != "ok":
-        for i in range(12):
+        for i in range(40):
             print("尝试重新预约")
-            time.sleep(30)
+            time.sleep(10)
             stat, msg = s.book_favorite_seat(cfg[key]['开始时间'], cfg[key]['持续小时数'])
             print(stat, msg)
             if stat == "ok":
