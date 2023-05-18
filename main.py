@@ -176,7 +176,7 @@ if __name__ == "__main__":
         exit(-1)
     stat, msg = s.book_favorite_seat(cfg[key]['开始时间'], cfg[key]['持续小时数'])
     if stat != "ok":
-        for i in range(40):
+        for i in range(30):
             print("尝试重新预约")
             time.sleep(12)
             stat, msg = s.book_favorite_seat(cfg[key]['开始时间'], cfg[key]['持续小时数'])
