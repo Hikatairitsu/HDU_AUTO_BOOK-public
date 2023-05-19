@@ -29,8 +29,9 @@ def get_one_study_room_seat(floor):
         # 58560-58759
         #return random.randint(58560, 58759)
         #return 58603
-        return random.randint(58645, 58675)
-
+        #return random.randint(58645, 58675)
+        return random.randint(58715, 58735)
+        
 class SeatAutoBooker:
     def __init__(self):
         self.json = None
