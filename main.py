@@ -4,7 +4,6 @@ import random
 from datetime import datetime, timedelta
 import json
 import os
-import numpy as np
 
 
 from selenium import webdriver
@@ -38,7 +37,7 @@ def get_one_study_room_seat(floor):
         interval2 = (58580, 58590)
         intervals = [interval1, interval2]
         selected_interval = random.choice(intervals)
-        random_num = np.random.randint(selected_interval[0], selected_interval[1])
+        random_num = random.randint(selected_interval[0], selected_interval[1])
         return random_num
         
 class SeatAutoBooker:
