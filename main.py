@@ -35,7 +35,7 @@ def get_one_study_room_seat(floor):
         
         if random.randint(0, 1) == 0:
             random = random.randint(58645, 58675)
-            else:
+        else:
             random = random.randint(58715, 58735)
         return random
         
