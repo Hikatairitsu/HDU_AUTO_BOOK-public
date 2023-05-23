@@ -33,11 +33,11 @@ def get_one_study_room_seat(floor):
         #return random.randint(58645, 58675)
         #return random.randint(58715, 58735)
         
-        interval1 = (58560, 58570)
-        interval2 = (58580, 58590)
-        selected_interval = random.choice([interval1, interval2])
-        random_num = random.randint(selected_interval[0], selected_interval[1])
-        return random_num
+        if random.randint(0, 1) == 0:
+            random = random.randint(58645, 58675)
+            else:
+            random = random.randint(58715, 58735)
+        return random
         
 class SeatAutoBooker:
     def __init__(self):
