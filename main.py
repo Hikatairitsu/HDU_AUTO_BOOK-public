@@ -35,8 +35,7 @@ def get_one_study_room_seat(floor):
         
         interval1 = (58560, 58570)
         interval2 = (58580, 58590)
-        intervals = [interval1, interval2]
-        selected_interval = random.choice(intervals)
+        selected_interval = random.choice([interval1, interval2])
         random_num = random.randint(selected_interval[0], selected_interval[1])
         return random_num
         
