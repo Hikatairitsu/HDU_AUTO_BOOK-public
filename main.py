@@ -29,17 +29,15 @@ def get_one_study_room_seat(floor):
     if floor == 22:
         # 58560-58759
         #return random.randint(58560, 58759)
-        #return 58603
+        return 58716
         #return random.randint(58645, 58675)
         #return random.randint(58715, 58735)
         
-        if random.randint(0, 1) == 0:
+        #if random.randint(0, 1) == 0:
             #my_random = random.randint(58645, 58675)
-            my_random = 58715
-        else:
+        #else:
             #my_random = random.randint(58715, 58735)
-            my_random = 58716
-        return my_random
+        #return my_random
         
 class SeatAutoBooker:
     def __init__(self):
