@@ -17,7 +17,7 @@ import time
 time_zone = 8  # 时区
 
 # 两天后日期
-key = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'][(datetime.now().weekday() + 3) % 7]
+key = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'][(datetime.now().weekday() + 2) % 7]
 
 def get_one_study_room_seat(floor):
     if floor == 2:
@@ -29,15 +29,16 @@ def get_one_study_room_seat(floor):
     if floor == 22:
         # 58560-58759
         #return random.randint(58560, 58759)
-        return 58716
+        #return 58716
         #return random.randint(58645, 58675)
         #return random.randint(58715, 58735)
         
-        #if random.randint(0, 1) == 0:
-            #my_random = random.randint(58645, 58675)
-        #else:
+        if random.randint(0, 1) == 0:
+            my_random = random.randint(58645, 58675)
+        else:
             #my_random = random.randint(58715, 58735)
-        #return my_random
+            my_random = 58716
+        return my_random
         
 class SeatAutoBooker:
     def __init__(self):
@@ -91,7 +92,7 @@ class SeatAutoBooker:
             seats = [get_one_study_room_seat(22)]
         # 相关post参数生成
         today_0_clock = datetime.strptime(datetime.now().strftime("%Y-%m-%d 00:00:00"), "%Y-%m-%d %H:%M:%S")
-        book_time = today_0_clock + timedelta(days=3) + timedelta(hours=start_hour)
+        book_time = today_0_clock + timedelta(days=2) + timedelta(hours=start_hour)
         delta = book_time - self.start_time
         total_seconds = delta.days * 24 * 3600 + delta.seconds
 
